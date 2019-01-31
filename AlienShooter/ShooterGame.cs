@@ -21,7 +21,7 @@ namespace AlienShooter
 
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.Clear();                                // без clear оцветява само реда на който е в момента
+            Console.Clear();                                
             Console.SetWindowSize(screenWidth, screenHeight);
             Console.SetBufferSize(screenWidth, screenHeight);
 
@@ -77,8 +77,8 @@ namespace AlienShooter
             }
         }
         static void Enemy(int screenHeight, int screenWidth) // да се зададе време 3-4 сек между появяването на нов враг
-                                                             // врага да не се трие заедно в с движението на човечето. 
-                                                             // врага да се движи по хоризонтала към нас
+                                                             // врагът да не се трие заедно в с движението на човечето. 
+                                                             // врагът да се движи по хоризонтала към нас
                                                              // да изчезва като го оцелим.
         {
             Random rnd = new Random();
