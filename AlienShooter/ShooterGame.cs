@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 
@@ -67,7 +68,7 @@ namespace AlienShooter
                 Console.Write("*");
                 if (projectileY > 0)
                 {
-                    System.Threading.Thread.Sleep(20);
+                    Thread.Sleep(40);
                     projectileY--;
                     Console.Clear();
                     Console.SetCursorPosition(playerX, playerY);
@@ -76,7 +77,7 @@ namespace AlienShooter
                 else isShotMade = !isShotMade;
             }
         }
-        static void Enemy(int screenHeight, int screenWidth) // да се зададе време 3-4 сек между появяването на нов враг
+        static void Enemy(int screenHeight, int screenWidth) // да се зададе време 1-4 сек между появяването на нов враг
                                                              // врагът да не се трие заедно в с движението на човечето. 
                                                              // врагът да се движи по хоризонтала към нас
                                                              // да изчезва като го оцелим.
