@@ -77,11 +77,12 @@ namespace AlienShooter
                 else isShotMade = !isShotMade;
             }
         }
-        static void Enemy(int screenHeight, int screenWidth) // да се зададе време 1-4 сек между появяването на нов враг
+        static void Enemy(int screenHeight, int screenWidth) // да се зададе време 1-4 сек между появяването на нов враг?!
                                                              // врагът да не се трие заедно в с движението на човечето. 
                                                              // врагът да се движи по хоризонтала към нас
                                                              // да изчезва като го оцелим.
-        {
+        {   
+            Thread.Sleep(200); //Added now
             Random rnd = new Random();
             int enemyX = rnd.Next(1, screenWidth);
             int enemyY = screenHeight - screenHeight;
